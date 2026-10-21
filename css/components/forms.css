@@ -20,6 +20,17 @@
 }
 .field textarea { resize: vertical; min-height: 96px; }
 
+/* iOS Safari: los date inputs ignoran width, colapsan su alto si están
+   vacíos y centran el texto. Esto los normaliza. */
+.field input[type='date'] {
+  display: block;
+  min-width: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  text-align: left;
+}
+.field input[type='date']::-webkit-date-and-time-value { text-align: left; }
+
 .field select {
   appearance: none;
   padding-right: var(--space-7);

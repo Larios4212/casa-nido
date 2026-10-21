@@ -32,14 +32,25 @@
   z-index: 50;
   height: var(--header-h);
   color: var(--color-white);
-  transition: background var(--dur) var(--ease), box-shadow var(--dur) var(--ease), color var(--dur);
+  transition: color var(--dur);
 }
-.site-header.is-scrolled {
+/* El fondo desenfocado vive en un pseudo-elemento: si backdrop-filter
+   estuviera en el header, este se volvería el contenedor de los hijos
+   position:fixed y el menú móvil quedaría atrapado en 72px de alto. */
+.site-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
   background: rgb(250 246 239 / 0.92);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  color: var(--text);
   box-shadow: var(--shadow-sm);
+  opacity: 0;
+  transition: opacity var(--dur) var(--ease);
 }
+.site-header.is-scrolled { color: var(--text); }
+.site-header.is-scrolled::before { opacity: 1; }
 .site-header__inner {
   height: 100%;
   display: flex;

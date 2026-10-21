@@ -2,6 +2,7 @@
 .hero {
   position: relative;
   min-height: min(92vh, 820px);
+  min-height: min(92svh, 820px); /* svh: no salta al ocultarse la barra del navegador móvil */
   display: flex;
   align-items: flex-end;
   padding: calc(var(--header-h) + var(--space-7)) 0 var(--space-8);
@@ -60,7 +61,7 @@
 }
 .booking__fields {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--space-4) var(--space-5);
 }
 .booking__summary {

@@ -4,6 +4,8 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-h) + var(--space-4));
   -webkit-text-size-adjust: 100%;
+  /* iOS Safari ignora overflow-x en body; clip en html evita el "bailoteo" lateral */
+  overflow-x: clip;
 }
 
 body {

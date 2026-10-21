@@ -18,7 +18,7 @@ npm test        # pruebas de la lógica de reservas
 casa-nido/
 ├── index.html                 # Marcado semántico; el contenido dinámico usa data-attributes
 ├── css/
-│   ├── main.css               # Punto de entrada; ordena la cascada con @layer
+│   ├── (orden de carga)       # Definido con <link> en index.html
 │   ├── tokens.css             # Design tokens: colores, tipografía, espaciado, sombras
 │   ├── base.css               # Reset, tipografía base y accesibilidad (focus, skip-link)
 │   ├── layout.css             # Contenedor, secciones, header y footer
