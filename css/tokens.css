@@ -1,0 +1,64 @@
+/* Design tokens: cambia la identidad visual completa desde aquí. */
+:root {
+  /* Paleta */
+  --color-forest: #2f4a3a;
+  --color-forest-700: #243a2d;
+  --color-clay: #d98b5f;
+  --color-clay-600: #c2754a;
+  --color-cream: #faf6ef;
+  --color-sand: #f3e9d8;
+  --color-ink: #1f2722;
+  --color-muted: #5f6b63;
+  --color-line: #e4dccd;
+  --color-white: #ffffff;
+  --color-danger: #b42318;
+
+  /* Roles semánticos */
+  --bg: var(--color-cream);
+  --bg-tinted: var(--color-sand);
+  --surface: var(--color-white);
+  --text: var(--color-ink);
+  --text-muted: var(--color-muted);
+  --primary: var(--color-forest);
+  --primary-hover: var(--color-forest-700);
+  --accent: var(--color-clay);
+  --accent-hover: var(--color-clay-600);
+  --border: var(--color-line);
+
+  /* Tipografía */
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --fs-xs: 0.8125rem;
+  --fs-sm: 0.9375rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
+  --fs-2xl: clamp(2rem, 1.5rem + 2.2vw, 3rem);
+  --fs-hero: clamp(2.5rem, 1.6rem + 4.5vw, 5rem);
+
+  /* Espaciado (escala 4px) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: clamp(4rem, 3rem + 4vw, 7rem);
+
+  /* Forma y profundidad */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+  --shadow-sm: 0 1px 2px rgb(31 39 34 / 0.06);
+  --shadow-md: 0 8px 24px -8px rgb(31 39 34 / 0.18);
+  --shadow-lg: 0 24px 48px -16px rgb(31 39 34 / 0.28);
+
+  /* Layout y movimiento */
+  --container: 1200px;
+  --gutter: clamp(1rem, 0.5rem + 2vw, 2rem);
+  --header-h: 72px;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --dur: 220ms;
+}

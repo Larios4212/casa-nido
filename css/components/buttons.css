@@ -1,0 +1,71 @@
+.btn {
+  --btn-bg: transparent;
+  --btn-fg: inherit;
+  --btn-border: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 44px;
+  padding: var(--space-2) var(--space-5);
+  border: 1.5px solid var(--btn-border);
+  border-radius: var(--radius-pill);
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  font-weight: 600;
+  font-size: var(--fs-sm);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background var(--dur) var(--ease), color var(--dur), border-color var(--dur), transform var(--dur) var(--ease);
+}
+.btn:active { transform: translateY(1px); }
+
+.btn--primary { --btn-bg: var(--primary); --btn-fg: var(--color-white); }
+.btn--primary:hover { --btn-bg: var(--primary-hover); }
+
+.btn--ghost { --btn-fg: var(--color-white); --btn-border: rgb(255 255 255 / 0.7); }
+.btn--ghost:hover { --btn-bg: rgb(255 255 255 / 0.12); --btn-border: var(--color-white); }
+
+.btn--outline { --btn-fg: var(--primary); --btn-border: var(--primary); }
+.btn--outline:hover { --btn-bg: var(--primary); --btn-fg: var(--color-white); }
+
+.btn--lg { min-height: 52px; padding-inline: var(--space-6); font-size: var(--fs-md); }
+.btn--block { width: 100%; }
+
+.chip {
+  padding: var(--space-2) var(--space-5);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  font-weight: 500;
+  font-size: var(--fs-sm);
+  cursor: pointer;
+  transition: all var(--dur) var(--ease);
+}
+.chip:hover { border-color: var(--primary); }
+.chip[aria-selected='true'] { background: var(--primary); border-color: var(--primary); color: var(--color-white); }
+
+.tag {
+  position: absolute;
+  top: var(--space-4);
+  left: var(--space-4);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-pill);
+  background: rgb(255 255 255 / 0.92);
+  color: var(--primary);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  backdrop-filter: blur(6px);
+}
+.tag--accent { background: var(--accent); color: var(--color-white); }
+
+.icon-button,
+.link-button {
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+}
+.icon-button { display: inline-flex; padding: var(--space-2); border-radius: var(--radius-pill); }
+.icon-button:hover { background: var(--bg-tinted); }
