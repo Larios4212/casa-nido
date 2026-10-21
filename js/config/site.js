@@ -6,10 +6,11 @@
 export const SITE = Object.freeze({
   name: 'Casa Nido',
   tagline: 'Un refugio cálido para descansar y conectar',
-  city: 'Tu ciudad',
-  region: 'Estado, País',
-  address: 'Calle Ejemplo 123, Colonia Centro',
-  mapsUrl: 'https://maps.google.com/?q=Casa+Nido',
+  city: 'Puerto Escondido',
+  region: 'Oaxaca, México',
+  address: 'Calle Tercera Pte. 702, Col. Juárez, C.P. 71984',
+  mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Calle+Tercera+Pte.+702,+Ju%C3%A1rez,+71984+Puerto+Escondido,+Oax.',
+  mapsEmbedUrl: 'https://www.google.com/maps?q=Calle+Tercera+Pte.+702,+Ju%C3%A1rez,+71984+Puerto+Escondido,+Oax.&z=16&output=embed',
 
   contact: {
     email: 'hola@casanido.com',

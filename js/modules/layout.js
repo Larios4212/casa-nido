@@ -29,6 +29,10 @@ export function hydrateContent(root = document) {
     el.href = links[el.dataset.siteLink] ?? el.href;
   });
 
+  root.querySelectorAll('[data-site-map]').forEach((frame) => {
+    frame.src = SITE.mapsEmbedUrl;
+  });
+
   root.querySelectorAll('[data-icon]').forEach((el) => {
     el.innerHTML = icon(el.dataset.icon, Number(el.dataset.size) || 20);
   });
