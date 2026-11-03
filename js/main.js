@@ -5,6 +5,8 @@
 import { hydrateContent, initHeader, initContactDialog, initReveal } from './modules/layout.js';
 import { initRooms } from './modules/rooms.js';
 import { initBooking } from './modules/booking.js';
+import { initCarousels } from './modules/carousel.js';
+import { initGallery } from './modules/gallery.js';
 
 document.documentElement.classList.add('js');
 
@@ -13,6 +15,11 @@ initHeader(document.querySelector('[data-header]'));
 initRooms({
   grid: document.querySelector('[data-rooms-grid]'),
   filters: document.querySelector('[data-rooms-filters]'),
+});
+initCarousels(document.querySelector('[data-rooms-grid]'));
+initGallery({
+  grid: document.querySelector('[data-gallery]'),
+  viewer: document.querySelector('[data-viewer]'),
 });
 initBooking(document.querySelector('[data-booking-form]'));
 initContactDialog(document.querySelector('[data-contact-dialog]'));

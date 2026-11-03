@@ -11,7 +11,8 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Casa Nido — Habitaciones y reservas">
   <meta property="og:description" content="Descansa en Casa Nido. Reserva directo y al mejor precio.">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=70&auto=format&fit=crop">
+  <meta property="og:image" content="https://larios4212.github.io/casa-nido/assets/img/areas/terraza-sala.jpg">
+  <link rel="preload" as="image" href="assets/img/areas/terraza-sala.jpg">
 
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -84,6 +85,18 @@
         <div class="rooms-grid" data-rooms-grid aria-live="polite"></div>
 
         <p class="fine-print">Los precios son tarifas de referencia. La disponibilidad y la tarifa final se confirman al reservar.</p>
+      </div>
+    </section>
+
+    <!-- ============ ÁREAS COMUNES ============ -->
+    <section class="section" id="areas-comunes" aria-labelledby="areas-title">
+      <div class="container">
+        <header class="section__header" data-reveal>
+          <p class="eyebrow">Áreas comunes</p>
+          <h2 id="areas-title">La terraza es el corazón de la casa</h2>
+          <p>Sillones para platicar, hamacas con vista, cocina compartida y una azotea para ver el atardecer.</p>
+        </header>
+        <ul class="gallery" data-gallery></ul>
       </div>
     </section>
 
@@ -207,6 +220,17 @@
       </ul>
     </div>
   </footer>
+
+  <!-- ============ VISOR DE FOTOS ============ -->
+  <dialog class="viewer" data-viewer aria-label="Foto ampliada">
+    <button class="viewer__close icon-button" type="button" data-close aria-label="Cerrar"><span data-icon="close" data-size="24"></span></button>
+    <button class="viewer__nav viewer__nav--prev" type="button" data-viewer-step="-1" aria-label="Foto anterior"><span data-icon="chevron-left" data-size="28"></span></button>
+    <figure class="viewer__figure">
+      <img data-viewer-img alt="">
+      <figcaption data-viewer-caption></figcaption>
+    </figure>
+    <button class="viewer__nav viewer__nav--next" type="button" data-viewer-step="1" aria-label="Foto siguiente"><span data-icon="chevron-right" data-size="28"></span></button>
+  </dialog>
 
   <!-- ============ MODAL CONTACTO ============ -->
   <dialog class="dialog" data-contact-dialog aria-labelledby="contact-title">

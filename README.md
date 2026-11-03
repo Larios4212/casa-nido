@@ -56,6 +56,6 @@ casa-nido/
 ## Pendientes antes de publicar
 
 - [ ] Datos reales en `js/config/site.js` (WhatsApp, correo, dirección, ciudad, link de Maps).
-- [ ] Habitaciones, precios y fotos reales en `js/data/rooms.js`. Guarda las fotos en `assets/img/` y usa formato `.webp`.
-- [ ] Imagen del hero en `css/sections.css` (`.hero`) y la etiqueta `og:image` en `index.html`.
+- [x] Precios y fotos reales (`assets/img/rooms/` y `assets/img/areas/`). Las fotos de la galería se editan en `js/data/gallery.js`.
+- [ ] Confirmar capacidad, tipo de cama y amenidades de cada habitación (marcados con `TODO` en `js/data/rooms.js`).
 - [ ] Páginas legales (términos, cancelación, privacidad) en el footer.

@@ -6,10 +6,19 @@ const priceUnit = (room) => (room.type === 'dorm' ? 'por cama / noche' : 'por no
 /** Plantilla de tarjeta de habitación. Componente puro: datos → HTML. */
 export const roomCard = (room) => `
   <article class="room-card" data-type="${room.type}" data-room-id="${room.id}">
-    <figure class="room-card__media">
-      <img src="${room.image}" alt="${escapeHtml(room.name)}" loading="lazy" width="900" height="600">
+    <div class="room-card__media" data-carousel>
+      <ul class="carousel__track" data-track tabindex="0" aria-label="Fotos de ${escapeHtml(room.name)}">
+        ${room.images.map((img, i) => `
+          <li class="carousel__slide">
+            <img src="${img.src}" alt="${escapeHtml(img.alt)}" loading="${i === 0 ? 'eager' : 'lazy'}" width="1024" height="683">
+          </li>`).join('')}
+      </ul>
       <span class="tag ${room.tag === 'Premium' ? 'tag--accent' : ''}">${escapeHtml(room.tag)}</span>
-    </figure>
+      ${room.images.length > 1 ? `
+        <button class="carousel__nav carousel__nav--prev" type="button" data-step="-1" aria-label="Foto anterior">${icon('chevron-left', 20)}</button>
+        <button class="carousel__nav carousel__nav--next" type="button" data-step="1" aria-label="Foto siguiente">${icon('chevron-right', 20)}</button>
+        <span class="carousel__count" data-count aria-live="polite">1 / ${room.images.length}</span>` : ''}
+    </div>
 
     <div class="room-card__body">
       <h3 class="room-card__title">${escapeHtml(room.name)}</h3>

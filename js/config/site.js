@@ -45,6 +45,7 @@ export const SITE = Object.freeze({
   nav: [
     { label: 'Inicio', href: '#inicio' },
     { label: 'Habitaciones', href: '#habitaciones' },
+    { label: 'Áreas comunes', href: '#areas-comunes' },
     { label: 'Reservar', href: '#reservar' },
     { label: 'Ubicación', href: '#ubicacion' },
   ],
